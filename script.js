@@ -6,7 +6,7 @@ function test(){
 		},1000)
 	})
 	prom.then((data)=>{
-		let text = document.createElement("div");
+		let text = document.getElementById("output");
 		text.innerText = data;
 		document.body.append(text)
 	})
