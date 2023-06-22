@@ -12,7 +12,7 @@ function test(){
 	// })
 	let prom1 = new Promise((resolve)=>{
 		setTimeout(()=>{
-			let data = "Hello, World!";
+			let data = "Hello, world!"
 			resolve(data);
 		},1000)
 	})
