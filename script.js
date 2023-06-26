@@ -10,15 +10,28 @@ function test(){
 	// 	text.innerText = data;
 	// 	document.body.append(text)
 	// })
-	let prom1 = new Promise((resolve)=>{
+	// let prom1 = new Promise((resolve)=>{
+	// 	setTimeout(()=>{
+	// 		let data = 'Hello, world!'
+	// 		resolve(data);
+	// 	},1000)
+	// })
+
+	// const output = document.getElementById("output");
+	// prom1.then((data)=>{
+	// 	output.innerText = data;
+	// })
+
+	return new Promise((resolve,reject)=>{
 		setTimeout(()=>{
-			let data = 'Hello, world!'
-			resolve(data);
+			resolve("Hello, world!")
 		},1000)
 	})
-
-	const output = document.getElementById("output");
-	prom1.then((data)=>{
-		output.innerText = data;
-	})
 }
+
+	test().then((data)=>{
+		const element = getElementById("output");
+		element.innerText = data;
+	})
+
+	
